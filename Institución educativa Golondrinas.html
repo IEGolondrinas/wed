@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institución Educativa Golondrinas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #01ab4a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #118538;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #cce5ff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #01ab4a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="file:///C:/Users/Usuario/Desktop/IE%20logo.png"Logo de la Institución Educativa Golondrinas" width="150">
+        <h1>Institución Educativa Golondrinas</h1>
+    </header>
+
+    <nav>
+        <a href="#" class="nav-link" data-target="inicio">Inicio</a>
+        <a href="#" class="nav-link" data-target="horizonte">Horizonte Institucional</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="inicio">
+            <h2>Bienvenido</h2>
+            <p>Bienvenido a la Institución Educativa Golondrinas. Estamos comprometidos con brindar una educación de calidad y fomentar el desarrollo integral de nuestros estudiantes.</p>
+        </section>
+
+        <section id="horizonte" style="display: none;">
+            <h2>Horizonte Institucional</h2>
+            <h3>Misión</h3>
+            <p>Nuestra misión es proporcionar una educación inclusiva y equitativa de calidad, promoviendo el desarrollo académico, social y emocional de nuestros estudiantes, preparándolos para ser ciudadanos responsables y comprometidos con la sociedad.</p>
+            
+            <h3>Visión</h3>
+            <p>Nuestra visión es ser reconocidos como una institución educativa líder en la formación integral de individuos autónomos, críticos, creativos y comprometidos con el bienestar de su entorno, contribuyendo al progreso de la comunidad y al desarrollo sostenible.</p>
+            
+            <h3>Valores Institucionales</h3>
+            <ul>
+                <li>Excelencia Académica</li>
+                <li>Respeto</li>
+                <li>Integridad</li>
+                <li>Responsabilidad</li>
+                <li>Colaboración</li>
+            </ul>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Institución Educativa Golondrinas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                const targetId = this.getAttribute('data-target');
+                document.getElementById(targetId).style.display = 'block';
+            });
+        });
+    </script>
+
+</body>
+</html>
